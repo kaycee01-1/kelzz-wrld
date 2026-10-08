@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+<Layout title="Help | Track, delivery, FAQ, contact" page="help">
+<main class="wrap sec"><h1>Help</h1>
+<nav class="subnav" aria-label="Help sections"><a href="#track">Track order</a><a href="#delivery">Delivery &amp; returns</a><a href="#faq">FAQ</a><a href="#contact">Contact &amp; store</a></nav>
+<section id="track" class="panel"><h2>Where's my order?</h2><form id="trackForm" style="margin-top:20px;max-width:520px"><label class="f" for="on">Order number</label><input id="on" placeholder="e.g. #BRD-10482" autocomplete="off" required><label class="f" for="te">Email used for the order</label><div class="inline"><input id="te" type="email" autocomplete="email" required><button class="btn" type="submit">Track</button></div></form><p class="mut" style="margin-top:8px;font-size:14px">Find it in your confirmation email or SMS.</p><div id="res" aria-live="polite"></div></section>
+<section id="delivery" class="panel"><h2>Delivery &amp; returns</h2><div class="two" style="margin-top:20px">
+<div class="box"><h3>Standard</h3><p class="mut">2–5 business days. Free over ₦100,000.</p></div><div class="box"><h3>Express</h3><p class="mut">1–2 business days.</p></div><div class="box"><h3>Store pickup</h3><p class="mut">Choose it at checkout. Bring your order number and a valid ID.</p></div><div class="box"><h3>Returns</h3><p class="mut">Unworn items with tags, within 14 days, for an exchange or refund.</p></div></div>
+<p class="mut" style="margin-top:16px">Lagos: same or next-day options depend on your location. We deliver across Nigeria and to selected countries: [list countries].</p></section>
+<section id="faq" class="panel"><h2>FAQ</h2><div style="margin-top:12px">
+<details><summary>How do I change or cancel an order?</summary><p>Contact us with your order number as soon as you can. We can change or cancel while it's still being prepared. After it ships, return it once delivered.</p></details>
+<details><summary>How much does delivery cost?</summary><p>It depends on your location and option. You'll see the exact amount at checkout. Standard delivery is free over ₦100,000.</p></details>
+<details><summary>Can I change my delivery address?</summary><p>Yes, while your order is being prepared. Once shipped, it depends on the delivery partner.</p></details>
+<details><summary>What if I miss my delivery?</summary><p>The delivery partner will contact you to try again. Message us if you can't be reached at the address.</p></details>
+<details><summary>How do I choose a size?</summary><p>Open any product and tap Size guide. Compare the measurements to a piece you own that fits well. Most pieces are relaxed, so size down for a closer fit.</p></details>
+<details><summary>How do I exchange or return an item?</summary><p>Send us your order number and the size you want within 14 days of delivery. Items must be unworn with tags attached.</p></details>
+<details><summary>What if my item is damaged or wrong?</summary><p>Contact us with your order number and a photo. We'll send a replacement or refund you at no cost.</p></details>
+<details><summary>What payment methods do you accept?</summary><p>[List accepted methods.] The options available to you appear at checkout.</p></details>
+</div></section>
+<section id="contact" class="panel"><h2>Contact &amp; store</h2><div class="two" style="margin-top:20px"><div style="display:grid;gap:14px;align-content:start">
+<div class="row"><span><b>Email</b><br>hello@brandname.com</span><a class="btn" href="mailto:hello@brandname.com">Email</a><button class="btn line" data-copy="hello@brandname.com">Copy</button></div>
+<div class="row"><span><b>Phone</b><br>+234 XXX XXX XXXX</span><a class="btn" href="tel:+234XXXXXXXXXX">Call</a></div>
+<div class="row"><span><b>WhatsApp</b><br>+234 XXX XXX XXXX</span><a class="btn" href="https://wa.me/234XXXXXXXXXX">Chat</a></div>
+<p class="mut">Support: Mon–Sat, 9:00 AM – 6:00 PM.</p>
+<div class="box"><h3>Flagship store</h3><p class="mut">[Store Address], Lagos<br>Mon–Sat 9:00 AM – 7:00 PM · Sun 12:00 PM – 6:00 PM</p><a class="btn line" href="https://www.google.com/maps/dir/?api=1&destination=Lagos%2C+Nigeria" target="_blank" rel="noopener">Get directions</a></div></div>
+<div><form id="msg"><label class="f">Name<input name="n" required autocomplete="name"></label><label class="f">Email<input name="e" type="email" required autocomplete="email"></label><label class="f">Order number (optional)<input name="o"></label><label class="f">Message<textarea name="m" required></textarea></label><button class="btn" type="submit">Send message</button></form><p id="thanks" role="status" hidden><b>Thanks. We'll get back to you as soon as possible.</b></p></div></div></section></main>
+</Layout>

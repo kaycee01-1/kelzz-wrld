@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+const error = Astro.url.searchParams.get("error");
+const msg = Astro.url.searchParams.get("msg");
+const next = Astro.url.searchParams.get("next") ?? "/account";
+if (Astro.locals.user) return Astro.redirect("/account");
+---
+<Layout title="Sign in" page="account">
+  <main class="wrap sec">
+    <h1>Sign in</h1>
+    <form method="post" action="/api/signin" style="max-width:420px;margin-top:24px">
+      
+      <label class="f">Email<input name="email" type="email" required autocomplete="email"></label>
+      <label class="f">Password<input name="password" type="password" required minlength="6" autocomplete="current-password"></label>
+      <input type="hidden" name="next" value={next}>
+      {error && <p class="err" role="alert">{error}</p>}
+      {msg && <p role="status"><b>{msg}</b></p>}
+      <button class="btn" type="submit">Sign in</button>
+      <p class="mut">No account? <a href="/signup">Create one</a></p>
+    </form>
+  </main>
+</Layout>

@@ -1,0 +1,10 @@
+const POLY="60% polyester, 40% cotton. Heavyweight brushed fleece.",COT="100% combed cotton. Dense, soft jersey.";
+export const PRODUCTS: any[] = [
+{id:"oversized-hoodie",name:"Essential Oversized Hoodie",cat:"hoodies",shape:"hoodie",price:48000,badge:"Best Seller",desc:"Heavyweight fleece with a dropped shoulder and a relaxed, boxy fit.",fabric:POLY,colors:[["Black","#161616"],["Ash","#8c8c88"],["Cream","#eae5d9"]]},
+{id:"classic-tee",name:"Classic Cotton T-Shirt",cat:"tshirts",shape:"tee",price:22000,desc:"The everyday tee in dense cotton with a clean, durable neckline.",fabric:COT,colors:[["White","#f4f3ef"],["Black","#161616"],["Stone","#b9b3a6"]]},
+{id:"logo-hoodie",name:"Signature Logo Hoodie",cat:"hoodies",shape:"hoodie",price:52000,badge:"New",isNew:1,desc:"Embroidered chest logo and a lined hood.",fabric:POLY,colors:[["Charcoal","#3a3a38"],["Cream","#eae5d9"],["Cobalt","#2f3cff"]]},
+{id:"crewneck",name:"Everyday Crewneck",cat:"sweatshirts",shape:"crew",price:38000,desc:"A soft, structured crewneck made to wear on repeat.",fabric:POLY,colors:[["Charcoal","#3a3a38"],["Cream","#eae5d9"]]},
+{id:"relaxed-tee",name:"Premium Relaxed Tee",cat:"tshirts",shape:"tee",price:26000,badge:"Best Seller",desc:"A heavier tee with a relaxed drop and a slightly longer body.",fabric:COT,colors:[["Black","#161616"],["Sand","#c8bda4"],["White","#f4f3ef"]]},
+{id:"sweatpants",name:"Essential Sweatpants",cat:"sweatpants",shape:"pants",price:42000,badge:"New",isNew:1,desc:"Tapered and relaxed, with a drawcord waist and deep pockets.",fabric:POLY,colors:[["Black","#161616"],["Ash","#8c8c88"]]},
+{id:"zip-hoodie",name:"Heavyweight Zip Hoodie",cat:"hoodies",shape:"hoodie",price:56000,desc:"Our heaviest fleece in a full-zip cut, built for colder days.",fabric:POLY,colors:[["Black","#161616"],["Grey","#77777a"]]},
+{id:"boxy-crew",name:"Boxy Crewneck",cat:"sweatshirts",shape:"crew",price:40000,badge:"New",isNew:1,desc:"Cropped and boxy with a ribbed hem and cuffs.",fabric:POLY,colors:[["Cobalt","#2f3cff"],["Black","#161616"]]}];

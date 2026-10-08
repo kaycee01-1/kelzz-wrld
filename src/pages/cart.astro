@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+<Layout title="Your cart" page="cart">
+<main class="wrap sec"><h1>Your cart</h1>
+<div id="empty" class="panel" hidden><h2 style="font-size:28px">Your cart is empty.</h2><p class="mut" style="margin:12px 0 20px">Pick something from the collection.</p><a class="btn" href="/">Shop now</a></div>
+<div id="full" class="cart" style="margin-top:24px" hidden><section><div id="lines"></div><p style="margin-top:16px"><a href="/">← Continue shopping</a></p></section>
+<aside class="panel" style="margin:0"><h3>Order summary</h3>
+<form id="promo" style="margin-top:16px"><label class="f" for="pc">Promo code</label><div class="inline"><input id="pc" autocomplete="off"><button class="btn" type="submit">Apply</button></div><p class="err" id="perr" role="alert"></p><p id="applied" style="font-weight:700"></p></form>
+<dl><dt class="mut">Subtotal</dt><dd id="sub"></dd><dt class="mut">Delivery</dt><dd id="ship"></dd><span id="disc-row" hidden style="display:contents"><dt>Discount</dt><dd id="disc"></dd></span></dl>
+<div class="row" style="justify-content:space-between"><b>Total</b><span class="tot" id="total"></span></div>
+<button class="btn full" id="go" style="margin-top:20px">Checkout</button></aside></div></main>
+</Layout>

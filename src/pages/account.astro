@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+const { supabase, user } = Astro.locals;
+const placed = Astro.url.searchParams.get("placed");
+const { data: orders } = await supabase
+  .from("orders")
+  .select("order_no,status,total,created_at,order_items(product_id,size,color,qty)")
+  .order("created_at", { ascending: false });
+---
+<Layout title="Account" page="account">
+  <main class="wrap sec">
+    <h1>Your account</h1>
+    <p class="mut" style="margin-top:12px">{user?.email}</p>
+    <form method="post" action="/api/signout" style="margin-top:16px;max-width:200px"><button class="btn line" type="submit">Sign out</button></form>
+    {placed && <div class="panel" role="status"><b>Order {placed} placed. Thank you!</b></div>}
+    <h2 style="margin-top:40px;font-size:28px">Orders</h2>
+    {orders?.length ? orders.map((o) => (
+      <div class="panel">
+        <div class="row" style="justify-content:space-between">
+          <b>{o.order_no}</b><span>{o.status.replace(/_/g, " ")} · ₦{o.total.toLocaleString("en-US")}</span>
+        </div>
+        <p class="mut">{new Date(o.created_at).toLocaleDateString("en-GB")}</p>
+        <ul class="mut">
+          {o.order_items.map((i) => <li>{i.qty} × {i.product_id} ({i.color}, {i.size})</li>)}
+        </ul>
+      </div>
+    )) : <p class="mut" style="margin-top:12px">No orders yet. <a href="/">Start shopping</a>.</p>}
+  </main>
+</Layout>
