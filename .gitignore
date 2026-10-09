@@ -3,3 +3,4 @@ dist
 .astro
 .env
 .vercel
+package-lock.json
